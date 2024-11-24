@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white text-center py-4">
+    <h1 class="text-2xl font-bold">Quiz App</h1>
+  </header>
+
+  <!-- Quiz Container -->
+  <main class="max-w-3xl mx-auto bg-white mt-8 rounded-lg shadow-lg p-6">
+    <!-- Quiz Question -->
+    <div id="quiz-container">
+      <h2 class="text-xl font-semibold mb-4" id="question">What is the capital of France?</h2>
+      
+      <!-- Options -->
+      <ul class="space-y-2" id="options">
+        <!-- Options will be injected here dynamically -->
+      </ul>
+
+      <!-- Submit Button -->
+      <button 
+        class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded" 
+        id="submit-btn">
+        Submit
+      </button>
+    </div>
+
+    <!-- Result Section (Hidden by Default) -->
+    <div id="result" class="hidden text-center mt-6">
+      <p id="result-text" class="text-lg font-semibold"></p>
+      <button 
+        class="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded" 
+        onclick="restartQuiz()">
+        Restart Quiz
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
